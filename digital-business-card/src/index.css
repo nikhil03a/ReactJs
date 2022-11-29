@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
+  background-color: #2d2d2f;
 }
 
 code {
@@ -21,8 +21,9 @@ code {
   padding-bottom: 40px;
 }
 .image{
-  padding: 10px;
+  padding: 2%;
   border-radius: 10%;
+  height: 400px;
 }
 .name{
   text-align: center;
@@ -38,11 +39,13 @@ code {
 }
 .button-1{
   width: 85px;
-  margin-left: 34%;
+  margin-left: 30%;
   background-color: aqua;
   border-color: aqua;
   height: 35px;
   border-radius: 12px;
+  margin-right: 6%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .button-2{
   width: 85px;
@@ -51,7 +54,9 @@ code {
   background-color: antiquewhite;
   border-color: antiquewhite;
   border-radius: 12px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 .mini-heading{
   padding-left: 10px;
   text-transform: uppercase;
@@ -63,6 +68,7 @@ code {
   padding-right: 20px;
   color:white;
   font-family: cursive;
+  text-align: justify;
 }
 .footer{
   margin-left: 26%;
