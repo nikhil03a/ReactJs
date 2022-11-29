@@ -3,14 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import logo from './images/OIP.jpeg';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 function Card() {
   return (
     <div className='box'>
-      <img src="logo"></img>
-    </div>
+      <img src="profile.jpeg" alt='' width="100%" height="350px"></img>
+    </div> 
   )
 
 }
