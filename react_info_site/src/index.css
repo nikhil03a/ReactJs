@@ -11,3 +11,43 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.nav-items{
+  list-style: none;
+  display: flex;
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-items li{
+  padding: 10px;
+}
+.logo{
+  width: 50px;
+  height: 50px;
+  padding-left: 2%;
+}
+
+.footer{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 50px;
+  text-align: center;
+  padding-top: 5px;
+  color: white;
+  background-color: grey;
+}
+.content{
+  padding-left: 50px;
+}
+h1{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+ol li{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.7rem;
+}
