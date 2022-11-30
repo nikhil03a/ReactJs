@@ -12,7 +12,7 @@ function Card() {
   return (
     <div className='box'>
       <Header />
-      <MainContent/>
+      <MainContent />
       <Footer />
     </div>
   )
