@@ -3,34 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Navbar from './Navbar';
+import TopContent from './TopContent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-function Bnb() {
+
+function Main() {
   return (
     <div>
-      <nav>
-        <ul className='navlist'>
-          <li className='nav-items'><img src="logo.webp" width="200px" height="80px"></img></li>
-          <li className='nav-items'><h2>airbnb</h2></li>
-        </ul>
-      </nav>
-      <div className='top-content'>
-        <img src="grid.png" className='grid-image'></img>
-        <h2 className='heading-1'>Online Experiences</h2>
-        <p className='heading-2'>Join unique interactive activities led by one-of-a-kind hosts all without 
-          leaving home
-        </p>
-      </div>
-      <div className='card'>
-        <img src="img1.jpeg" width="300px" height="400px"></img>
-        <p><strong>⭐5.0 </strong><span className='light'> (6) - USA </span> </p>
-        <p>Life Lesson from Katie Zaferes</p>
-        <p><strong>From $136 </strong>/person </p>
-      </div>
+      <Navbar />
+      <TopContent />
+      <App />
     </div>
   )
 }
-root.render(<Bnb />);
+root.render(<Main />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
