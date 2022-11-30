@@ -21,6 +21,12 @@ function Bnb() {
           leaving home
         </p>
       </div>
+      <div className='card'>
+        <img src="img1.jpeg" width="300px" height="400px"></img>
+        <p><strong>⭐5.0 </strong><span className='light'> (6) - USA </span> </p>
+        <p>Life Lesson from Katie Zaferes</p>
+        <p><strong>From $136 </strong>/person </p>
+      </div>
     </div>
   )
 }

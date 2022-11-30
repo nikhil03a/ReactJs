@@ -43,3 +43,18 @@ code {
   color: grey;
   margin-right: 20%;
 }
+.card{
+  margin-left: 8%;
+  border-radius: 5px;
+  width: 300px;
+  border: 2px solid grey;
+}
+.card img{
+  border-radius: 5px;
+}
+.card p{
+  padding: 0 5px;
+}
+.light{
+  font-weight: lighter;
+}
