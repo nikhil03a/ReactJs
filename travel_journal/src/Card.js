@@ -4,7 +4,7 @@ export default function Card(props) {
     return (
             
             <div className='card'>
-                <img src={props.img} width='250px' height='350px'></img>
+                <img src={props.img} width='250px' height='350rem'></img>
                 <div className='content'>
                     <ul>
                         <li>
