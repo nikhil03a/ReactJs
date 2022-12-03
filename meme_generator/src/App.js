@@ -4,20 +4,17 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='header'>
+        <img src='icon2.jpeg'></img>
+        <h2>Meme Generator</h2>
+      </div>
+      <div className='main'>
+        <form >
+          <input type='text' placeholder='---Top Text---'></input>
+          <input type='text' placeholder='---Bottom Text---'></input><br></br>
+          <button >Get a new meme image</button>
+        </form>
+      </div>
     </div>
   );
 }
