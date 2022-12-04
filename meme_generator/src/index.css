@@ -52,3 +52,24 @@ code {
   padding: 10px;
   cursor: pointer;
 }
+.meme{
+  position: relative;
+}
+.top-text{
+  position: absolute;
+  top: 20px;
+  left: 50%;
+}
+.top-text{
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  color: white;
+  font-size: 3rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+.bottom-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}

@@ -21,6 +21,13 @@ function App() {
       url: newUrl
     }))
   }
+  function changeHandler(event) {
+    setMeme(prevMeme => ({
+      ...prevMeme,
+      [event.target.name]: event.target.value
+    }
+    ))
+  }
   return (
     <div className="App">
       <div className='header'>
@@ -29,14 +36,18 @@ function App() {
       </div>
       <div className='main'>
         <div >
-          <input type='text' placeholder='---Top Text---'></input>
-          <input type='text' placeholder='---Bottom Text---'></input><br></br>
+          <input type='text' placeholder='---Top Text---' name='topText' onChange={changeHandler}></input>
+          <input type='text' placeholder='---Bottom Text---' name='bottomText' onChange={changeHandler}></input><br></br>
           <button onClick={getRandomMeme} >Get a new meme image</button>
         </div>
+        <div className='meme'>
         <img src={meme.url}></img>
+        <div className='top-text'>{meme.topText}</div>
+        <div className='bottom-text'>{meme.bottomText}</div>
+        </div>
+        
       </div>
     </div>
   );
 }
-
 export default App;
