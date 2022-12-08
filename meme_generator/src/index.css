@@ -63,13 +63,18 @@ code {
 .top-text{
   position: absolute;
   top: 20px;
-  left: 50%;
+  left: 40%;
   color: white;
   font-size: 3rem;
+  font-weight: 900;
   font-family: 'Courier New', Courier, monospace;
 }
 .bottom-text{
   position: absolute;
-  top: 50%;
-  left: 50%;
+  bottom: 20px;
+  left: 40%;
+  color: white;
+  font-size: 3rem;
+  font-weight: 900;
+  font-family: 'Courier New', Courier, monospace;
 }
