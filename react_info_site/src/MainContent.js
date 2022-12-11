@@ -1,6 +1,8 @@
 import React from "react";
-export default function MainContent() {
+export default function MainContent(props) {
+  const temp = props.mode ? 'dark' : 'light';
     return (
+      <div className={temp}>
       <div className='content'>
         <h1>Fun Facts About React</h1>
         <ul>
@@ -10,6 +12,7 @@ export default function MainContent() {
           <li>Is maintained by Facebook</li>
           <li>Powers thousands of enterprise apps, including mobile apps</li>
         </ul>
+      </div>
       </div>
     )
   }

@@ -10,11 +10,15 @@ import Footer from './Footer';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function Temporary() {
+  function toggle(){
+    setDarkMode(prevMode => !prevMode);
+  }
+  const [darkMode,setDarkMode] = React.useState(false);
   return (
     <div>
-      <Header />
-      <MainContent />
-      <Footer />
+      <Header mode={darkMode} modeToggle={toggle} />
+      <MainContent mode={darkMode} />
+      <Footer mode={darkMode} />
     </div>
   )
 }
