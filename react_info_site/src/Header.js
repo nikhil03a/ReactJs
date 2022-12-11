@@ -4,7 +4,6 @@ import Footer from "./Footer";
 export default function Header(props) {
   const temp = props.mode ? 'dark' : 'light';
   return (
-    <div>
       <header className={temp}>        
       <nav className='nav'>
         <img src="logo192.png" alt="" className='logo'></img>
@@ -15,8 +14,6 @@ export default function Header(props) {
             <label for="switch" class="toggle" >Dark Mode</label></li>
         </ul>
       </nav>
-    </header>
-    </div>
-    
+    </header>    
   )
 }
