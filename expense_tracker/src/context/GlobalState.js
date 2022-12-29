@@ -10,7 +10,7 @@ const initialState = {
     ]
 }
 
-export const GlobalContext = React.createContext(initialState);
+export const GlobalContext = React.createContext();
 
 export const GlobalProvider = ({ children }) => {
     const [state, dispatch] = React.useReducer(AppReducer, initialState);
