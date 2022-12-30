@@ -1,10 +1,13 @@
 import './App.css';
-
+import Content from './Content';
+import { GlobalProvider } from './GlobalState';
+import SetValue from './SetValue';
 function App() {
   return (
-    <h1>
-      Hello World
-    </h1>
+    <GlobalProvider>
+      <Content />
+      <SetValue />
+    </GlobalProvider>
   );
 }
 
