@@ -41,9 +41,9 @@
   height: 300px;
   margin-left: 20%;
   text-align: center;
-  border: 2px solid black;
   padding: 5%;
-  background-color: #c7eed7;
+  color:#7B2869;
+  background-color: #FFBABA;
 }
 .content h1{
   font-size: 4rem;
@@ -66,4 +66,26 @@
 p{
   font-size: 50px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #3C6255;
+}
+.content-set{
+  width: 50%;
+  margin-left: 20%;
+  text-align: center;
+  padding: 5%;
+  color:#7B2869;
+  background-color: #FFBABA;
+}
+.btn2{
+  width:150px;
+  height: 2rem;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.input2{
+  height: 2rem;
+  width: 20%;
+  margin-right: 20px;
 }
