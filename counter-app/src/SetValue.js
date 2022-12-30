@@ -7,7 +7,7 @@ const SetValue = () => {
         setNum(event.target.value);
     }
     function handleClick(event) {
-        if (num > 0) {
+        if (num > 0 || num<0) {
             setVal(num);
             setNum("");
         }
