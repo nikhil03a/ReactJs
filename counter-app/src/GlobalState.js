@@ -13,7 +13,7 @@ export const GlobalProvider = ({children})=>{
     function setVal(num){
         setNumber(num);
     }
-    return (<GlobalContext.Provider value={{number,increase,decrease,setVal}}>
+    return (<GlobalContext.Provider value={{number,increase,decrease,setVal,setNumber}}>
         {children}
     </GlobalContext.Provider>)
 }
