@@ -1,10 +1,15 @@
 import './App.css';
+import { GlobalProvider } from './GlobalState';
+import TodoForm from './TodoForm';
+import TodoList from './TodoList';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Todo App</h1>
-    </div>
+    <GlobalProvider>
+      <h3>Todo App</h3>
+      <TodoForm />
+      <TodoList />
+    </GlobalProvider>
   );
 }
 
