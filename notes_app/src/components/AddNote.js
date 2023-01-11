@@ -5,15 +5,17 @@ const AddNote = ({ addNote }) => {
     const [chars, setChars] = useState(200);
     const handleChange = (e) => {
         if (chars > 0) {
-            setChars(prevChars => prevChars - 1);
+            setChars(200 - (noteText.trim().length));
             setNoteText(e.target.value);
         }
     }
     const handleSaveClick = (e) => {
         e.preventDefault();
-        addNote(noteText);
-        setNoteText('');
-        setChars(200);
+        if (noteText.trim().length > 0) {
+            addNote(noteText);
+            setNoteText('');
+            setChars(200);
+        }
     }
     return (
 
