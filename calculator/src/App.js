@@ -13,6 +13,9 @@ function App() {
   function reducer(state, action) {
     switch (action.type) {
       case ACTIONS.ADD_DIGIT:
+        if (state.overwrite) {
+          return { ...state, current: action.payload, overwrite: false };
+        }
         if (action.payload === '0' && state.current === '0') {
           return state;
         } else if (action.payload === '.' && state.current.includes('.')) {
@@ -25,26 +28,32 @@ function App() {
       case ACTIONS.CLEAR:
         return {};
       case ACTIONS.CHOOSE_OPERATION:
-        if (state.current == null) {
-          return { ...state, operation: action.payload }
-        }
         if (state.current == null && state.previous == null) {
           return state;
+        }
+        if (state.current == null) {
+          return { ...state, operation: action.payload }
         }
         if (state.previous == null) {
           return { ...state, previous: state.current, current: null, operation: action.payload };
         }
         return { ...state, previous: evaluate(state), current: null, operation: action.payload };
       case ACTIONS.EVALUATE:
-        if(state.current == null && state.previous==null){
+        if (state.current == null || state.previous == null || state.operation == null) {
           return state;
         }
-        if(state.current==null){
-          return {...state,operation:null,current:state.previous,previous:null};
-        }
-        return {...state,previous:null,operation:null,current:evaluate(state)}
+        return { ...state, previous: null, operation: null, current: evaluate(state), overwrite: true }
+      case ACTIONS.DELETE_DIGIT:
+        if (state.overwrite)
+          return { ...state, overwrite: false, current: null };
+        if (state.current == null)
+          return state;
+        if (state.current.length === 1)
+          return { ...state, current: null }
+        return { ...state, current: state.current.substring(0, state.current.length - 1) }
     }
   }
+  
   function evaluate({ current, previous, operation }) {
     const prev = parseFloat(previous);
     const curr = parseFloat(current);
@@ -75,7 +84,7 @@ function App() {
         <div className='current-operand'>{current}</div>
       </div>
       <button className='span-two' onClick={() => { dispatch({ type: ACTIONS.CLEAR }) }}>AC</button>
-      <button>DEL</button>
+      <button onClick={() => { dispatch({ type: ACTIONS.DELETE_DIGIT }) }}>DEL</button>
       <OperationButton dispatch={dispatch} operation="÷" />
       <DigitButton dispatch={dispatch} digit="1" />
       <DigitButton dispatch={dispatch} digit="2" />
