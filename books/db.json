@@ -1,0 +1,16 @@
+{
+  "books": [
+    {
+      "title": "Cindrella 2",
+      "id": 3
+    },
+    {
+      "title": "Psychology of Money",
+      "id": 5
+    },
+    {
+      "title": "Harry Potter",
+      "id": 6
+    }
+  ]
+}

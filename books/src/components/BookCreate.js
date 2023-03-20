@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
-
-const BookCreate = ({createBook}) => {
+import React, { useContext, useState } from 'react'
+import { GlobalContext } from '../GlobalContext';
+const BookCreate = () => {
+  const {createBook} = useContext(GlobalContext);
   const [title,setTitle] = useState('');
   const handleChange = (e)=>{
     setTitle(e.target.value);

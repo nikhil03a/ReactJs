@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import BookShow from './BookShow'
-const BookList = ({books,deleteBook,updateBook}) => {
+import { GlobalContext } from '../GlobalContext'
+const BookList = () => {
+  const {books} = useContext(GlobalContext)
+  const renderedBooks = books.map((book)=>{
+    return ( <BookShow key={book.id} book={book} />)
+  })
   return (
     <div className='book-list'>
-      {books.map((book)=>{
-        return <BookShow key={book.id} book={book} deleteBook={deleteBook} updateBook={updateBook} />
-      })}
+      {renderedBooks}
     </div>
   )
 }

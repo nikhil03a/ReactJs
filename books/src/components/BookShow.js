@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import BookEdit from './BookEdit'
-const BookShow = ({ book, deleteBook ,updateBook}) => {
+import { GlobalContext } from '../GlobalContext'
+const BookShow = ({book}) => {
+  const {deleteBookById,updateBook} = useContext(GlobalContext)
   const handleDelete = () => {
-    deleteBook(book.id);
+    deleteBookById(book.id);
   }
   const handleEdit = () =>{
     setEdit(!edit);
@@ -14,7 +16,7 @@ const BookShow = ({ book, deleteBook ,updateBook}) => {
   const [edit, setEdit] = useState(false);
   let content = <h3>{book.title}</h3>
   if (edit) {
-    content = <BookEdit book={book} updateBook={updateBook} handleSubmit={handleSubmit}/>
+    content = <BookEdit book={book} handleSubmit={handleSubmit}/>
   }
   return (
     <div className='book-show'>

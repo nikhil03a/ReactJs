@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-const BookEdit = ({book,updateBook,handleSubmit}) => {
+const BookEdit = ({book,handleSubmit}) => {
   const [title,setTitle] = useState(book.title);
   const handleChange = (e)=>{
     setTitle(e.target.value);
