@@ -4,11 +4,10 @@ export const GlobalContext = createContext();
 
 export const GlobalProvider = ({children})=>{
     const [state,dispatch] = useReducer(reducer,[]);
-    const fetchBooks = async ()=>{
+    const fetchBooks = useCallback(async ()=>{
       const response = await axios.get('http://localhost:3001/books');
       setBooks(response.data);
-    }
-    const stableFetchBooks = useCallback(fetchBooks,[]);
+    },[]);
     const setBooks = (books)=>{
       dispatch({
         type:'SET',
@@ -36,13 +35,6 @@ export const GlobalProvider = ({children})=>{
         const response = await axios.put(`http://localhost:3001/books/${id}`, {
           title
         })
-        // const updatedBooks = books.map((book) => {
-        //   if (book.id === id) {
-        //     return { ...book, ...response.data }
-        //   }
-        //   return book;
-        // })
-        // setBooks(updatedBooks);
         dispatch({
           type:'UPDATE',
           payload:{
@@ -50,7 +42,7 @@ export const GlobalProvider = ({children})=>{
           }
         })
       }
-    return (<GlobalContext.Provider value={{books:state,stableFetchBooks,createBook,deleteBookById,updateBook}}>
+    return (<GlobalContext.Provider value={{books:state,fetchBooks,createBook,deleteBookById,updateBook}}>
         {children}
     </GlobalContext.Provider>)
 }
