@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+button > svg{
+    margin-right:5px;
+}
+body{
+    margin-top: 10px;
+    margin-left: 20px;
+}
