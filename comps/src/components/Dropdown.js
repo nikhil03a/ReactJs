@@ -14,11 +14,12 @@ const Dropdown = ({ options, selected, changeSelected }) => {
     const divEl = useRef();
     useEffect(()=>{
         const handler = (event)=>{
-            if(!divEl.current.contains(event.target))
+            if(divEl.current && !divEl.current.contains(event.target))
                 setShow(false);
         }
         document.addEventListener('click',handler,true);
         return ()=>{
+            console.log("Cleanup")
             document.removeEventListener('click',handler);
         }
     },[])

@@ -1,7 +1,7 @@
 import React from 'react'
 import className from 'classnames'
 const Button = ({children,primary,secondary,success,warning,failure,rounded,outline,...rest}) => {
-  const classes = className('px-3 py-1.5 border flex items-center',{
+  const classes = className('px-3 py-1.5 border flex items-center mb-3 ml-2',{
     "border-blue-600 bg-blue-500 text-white":primary && !outline,
     "border-gray-600 bg-gray-500 text-white":secondary && !outline,
     "border-green-600 bg-green-500 text-white":success && !outline,
