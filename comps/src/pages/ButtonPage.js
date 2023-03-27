@@ -4,7 +4,7 @@ import {GoBell} from 'react-icons/go';
 import {GrAchievement} from 'react-icons/gr'
 const ButtonPage = () => {
   const handleClick = ()=>{
-    console.log("Event!!");
+    // console.log("Event!!");
   }
   return (
     <div>

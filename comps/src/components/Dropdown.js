@@ -19,7 +19,6 @@ const Dropdown = ({ options, selected, changeSelected }) => {
         }
         document.addEventListener('click',handler,true);
         return ()=>{
-            console.log("Cleanup")
             document.removeEventListener('click',handler);
         }
     },[])
