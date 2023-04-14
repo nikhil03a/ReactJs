@@ -17,7 +17,7 @@ const Table = ({ data, config, keyFn }) => {
             {data.map((rowData) => {
                 return <tr className='border-b' key={keyFn(rowData)}>
                     {config.map((column) => {
-                        return <td className='p-3' key={column.label}>{column.render(rowData)}</td>
+                        return <td className='p-4' key={column.label}>{column.render(rowData)}</td>
                     })}
                 </tr>
             })}
